@@ -1,14 +1,16 @@
-var express = require('express');
+var content;
+// First I want to read the file
+fs.readFile('./Index.html', function read(err, data) {
+    if (err) {
+        throw err;
+    }
+    content = data;
 
-var app = express.createServer(express.logger());
-
-fs.writeFile('index.html', 'Vai que vem', function (err) {
-  if (err) throw err;
-  console.log('It\'s saved!');
+    // Invoke the next step here however you like
+    console.log(content);   // Put all of the code here (not the best solution)
+    processFile();          // Or put the next step in a function and invoke it
 });
 
-
-var port = process.env.PORT || 5000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+function processFile() {
+    console.log(content);
+}
