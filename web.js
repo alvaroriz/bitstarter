@@ -6,16 +6,8 @@ var app = express.createServer(express.logger());
 var fs = require('fs');
 fs.readFile('./index.html', 'utf8', function(err, data) {
   // the data is passed to the callback in the second argument
-  //console.log(data);
-  response.send(data);
+  console.log(data);
 });
-
-//app.get('/', function(request, response) {
-//  response.send('Hello World 2!');
-//});
-
-
-
 
 
 var port = process.env.PORT || 5000;
