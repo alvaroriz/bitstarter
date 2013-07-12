@@ -1,6 +1,6 @@
 var content;
 // First I want to read the file
-fs.readFile('Index.html', function read(err, data) {
+fs.readFile('./Index.html', function read(err, data) {
     if (err) {
         throw err;
     }
