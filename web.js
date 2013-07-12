@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 
 var fs = require('fs');
-fs.readFile('./index.html', 'utf8', function(err, data) {
+fs.readFile('index.html', 'utf8', function(err, data) {
   // the data is passed to the callback in the second argument
   console.log(data);
 });
